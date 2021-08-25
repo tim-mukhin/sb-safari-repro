@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Reproduction of Storybook issue with Safari
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Describe the bug**
+The Composition on Safari browser (desktop and mobile) is broken. See the reproducing steps.
 
-## Available Scripts
+**To Reproduce**
+1. First option with official storybook
+Steps:
+- Open [official storybook](https://next--storybookjs.netlify.app/official-storybook) from the docs.
+- Scroll down on the left panel to external storybook, open any story, wait until it loads and select the Docs tab
 
-In the project directory, you can run:
+![]('./public/images/step1.png')
 
-### `npm start`
+- Scroll stories back to top and choose any story from the current storybook
+- Now the docs tab will stuck with docs from external storybook
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![]('./public/images/step2.png')
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Second option with this repo
+- Clone this repo
+- Install dependencies
+- Start storybook with `yarn storybook`
+- Scroll down on the left panel to external storybook `sample2`, open any story, wait until it loads and select the Docs tab
 
-### `npm test`
+![]('./public/images/step3.png')
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Scroll stories back to top and choose any story from the current storybook
+- Now you can see "No docs" block on any docs page
 
-### `npm run build`
+![]('./public/images/step4.png')
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- And after that you can also reproduce the issue from first oprion if you open external 'Official storybook'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**System**
+System:
+    OS: macOS 11.5
+    CPU: (8) arm64 Apple M1
+  Binaries:
+    Node: 14.17.4 - ~/.nvm/versions/node/v14.17.4/bin/node
+    Yarn: 3.0.1 - ~/.nvm/versions/node/v14.17.4/bin/yarn
+    npm: 6.14.14 - ~/.nvm/versions/node/v14.17.4/bin/npm
+  Browsers:
+    Edge: 92.0.902.78
+    Firefox: 90.0.2
+    Safari: 14.1.2
+  npmPackages:
+    @storybook/addon-actions: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+    @storybook/addon-docs: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+    @storybook/addon-essentials: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+    @storybook/addon-links: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+    @storybook/node-logger: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+    @storybook/preset-create-react-app: ^3.2.0 => 3.2.0 
+    @storybook/react: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Additional context**
+The issue also reprodusable on MacOS Catalina and iOS 14
