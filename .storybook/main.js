@@ -1,4 +1,14 @@
 module.exports = {
+  refs: {
+    official: {
+      title: "Official storybook",
+      url: 'https://next--storybookjs.netlify.app/official-storybook'
+    },
+    sample2: {
+      title: "sample2",
+      url: 'https://5be26744d2f6250024a9117d-ydeqctdlhf.chromatic.com/'
+    },
+  },
   "stories": [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
