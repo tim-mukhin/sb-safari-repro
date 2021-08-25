@@ -32,6 +32,7 @@ Steps:
 - And after that you can also reproduce the issue from first oprion if you open external 'Official storybook'
 
 **System**
+```
 System:
     OS: macOS 11.5
     CPU: (8) arm64 Apple M1
@@ -51,6 +52,7 @@ System:
     @storybook/node-logger: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
     @storybook/preset-create-react-app: ^3.2.0 => 3.2.0 
     @storybook/react: ^6.4.0-alpha.32 => 6.4.0-alpha.32 
+```
 
 **Additional context**
 The issue also reprodusable on MacOS Catalina and iOS 14
