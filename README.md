@@ -9,12 +9,12 @@ Steps:
 - Open [official storybook](https://next--storybookjs.netlify.app/official-storybook) from the docs.
 - Scroll down on the left panel to external storybook, open any story, wait until it loads and select the Docs tab
 
-![]('./public/images/step1.png')
+![](/public/images/step1.png)
 
 - Scroll stories back to top and choose any story from the current storybook
 - Now the docs tab will stuck with docs from external storybook
 
-![]('./public/images/step2.png')
+![](/public/images/step2.png)
 
 2. Second option with this repo
 - Clone this repo
@@ -22,12 +22,12 @@ Steps:
 - Start storybook with `yarn storybook`
 - Scroll down on the left panel to external storybook `sample2`, open any story, wait until it loads and select the Docs tab
 
-![]('./public/images/step3.png')
+![](/public/images/step3.png)
 
 - Scroll stories back to top and choose any story from the current storybook
 - Now you can see "No docs" block on any docs page
 
-![]('./public/images/step4.png')
+![](/public/images/step4.png)
 
 - And after that you can also reproduce the issue from first oprion if you open external 'Official storybook'
 
